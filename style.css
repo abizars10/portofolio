@@ -107,17 +107,18 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 9rem 7% 2rem;
+  padding: 5rem 7% 2rem;
 }
 
 .home {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.home .home-content {
-  max-width: 75vw;
-}
+/* .home .home-content {
+  max-width: 44rem;
+} */
 
 .home-content h3 {
   font-size: 3.2rem;
@@ -131,7 +132,12 @@ section {
 }
 
 .home-content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
+}
+
+.home-content p > span {
+  font-weight: 600;
+  font-size: 2.5rem;
 }
 
 .home-content .social-media a {
@@ -176,11 +182,23 @@ section {
 }
 
 .home-img img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 30%;
+  /* padding-top: 50px;
+  padding-left: 150px; */
+  width: 50rem;
   pointer-events: none;
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 span {
@@ -192,11 +210,10 @@ span {
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  background: rebeccapurple;
 }
 
 .about-img img {
-  width: 40vw;
+  width: 44rem;
 }
 
 .heading {
@@ -397,12 +414,7 @@ span {
   .header {
     padding: 2rem 3%;
   }
-  .home .profession-container .profession-box {
-    right: -20vw;
-  }
-  .home .profession-container .overlay {
-    right: -15vw;
-  }
+
   .heading {
     font-size: 3.5rem;
   }
