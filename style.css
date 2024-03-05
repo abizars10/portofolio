@@ -118,7 +118,7 @@ section {
 }
 
 /* .home .home-content {
-  max-width: 44rem;
+  width: 84rem;
 } */
 
 .home-content h3 {
@@ -185,7 +185,7 @@ section {
 .home-img img {
   /* padding-top: 50px;
   padding-left: 150px; */
-  width: 50rem;
+  width: 40rem;
   pointer-events: none;
   animation: floatImg 4s ease-in-out infinite;
   filter: drop-shadow(10px 7px 10px grey);
@@ -303,12 +303,18 @@ span {
   width: 3rem;
   height: 3rem;
   background: var(--white-color);
+  color: var(--main-color);
   border-radius: 50%;
+  border: 0.2rem solid var(--main-color);
+}
+.portfolio-layer a:hover {
+  background: var(--main-color);
+  color: var(--white-color);
 }
 
 .portfolio-layer a i {
   font-size: 1.5rem;
-  color: #333;
+  /* color: #333; */
 }
 
 .contact h2 {
@@ -391,16 +397,21 @@ span {
 /* media queries */
 /* Laptop */
 @media only screen and (max-width: 980px) {
-  .home .home-content {
-    max-width: 35vw;
-  }
-
   .home .home-content h1 {
     font-size: 3.9rem;
   }
-
   .home .home-content h3 {
     font-size: 2.7rem;
+  }
+  .home-img img {
+    width: 35rem;
+  }
+  .about-img img {
+    width: 30rem;
+  }
+  .portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* Tablet */
@@ -409,11 +420,11 @@ span {
     font-size: 50%;
   }
   section {
-    padding: 2rem 3%;
+    padding: 11rem 3%;
   }
-  .home .home-content p {
+  /* .home .home-content p {
     margin-bottom: 5rem;
-  }
+  } */
   .header {
     padding: 2rem 3%;
   }
@@ -445,9 +456,9 @@ span {
     color: var(--text-color);
     margin-bottom: 0.1rem;
   }
-  .home-img img {
+  /* .home-img img {
     display: none;
-  }
+  } */
   .navbar {
     position: absolute;
     top: 100%;
@@ -479,32 +490,29 @@ span {
     display: none;
   }
   .home {
-    padding: 0 3% 23rem;
+    /* padding: 0 3% 23rem; */
     justify-content: center;
     text-align: center;
+    flex-direction: column-reverse;
   }
+
   .home-content h3 {
     font-size: 2.6rem;
   }
   .home-content h1 {
     font-size: 5rem;
   }
-  .home .home-content p {
-    margin-bottom: 0;
-  }
+
   .home-content .social-media a {
     margin: 2.5rem 0.75rem 3rem;
   }
-  .home .profession-container .overlay {
-    position: fixed;
-    top: 70rem;
-    left: 50%;
-    right: 0;
-    transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
-    border-width: 23.9rem;
+  .about {
+    flex-direction: column;
+    gap: 4rem;
   }
 
-  .home .profession-container .profession-box {
-    right: 0;
+  .portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
