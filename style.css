@@ -53,6 +53,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   margin-right: auto;
+  filter: drop-shadow(10px 7px 10px grey);
 }
 
 .navbar a {
@@ -107,7 +108,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 5rem 7% 2rem;
+  padding: 10rem 7% 2rem;
 }
 
 .home {
@@ -187,6 +188,7 @@ section {
   width: 50rem;
   pointer-events: none;
   animation: floatImg 4s ease-in-out infinite;
+  filter: drop-shadow(10px 7px 10px grey);
 }
 
 @keyframes floatImg {
@@ -209,11 +211,12 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 8rem;
 }
 
 .about-img img {
-  width: 44rem;
+  width: 40rem;
+  filter: drop-shadow(10px 7px 10px grey);
 }
 
 .heading {
@@ -232,7 +235,7 @@ span {
 
 .about-content p {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: justify;
 }
 
@@ -255,7 +258,7 @@ span {
   position: relative;
   display: flex;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 7px 10px grey;
   overflow: hidden;
 }
 .portfolio-box img {
