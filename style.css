@@ -315,6 +315,58 @@ span {
   color: var(--white-color);
 }
 
+.certi-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 1rem;
+}
+.certi-container .certi-wrapper {
+  position: relative;
+  max-width: 75rem;
+  width: 100%;
+  padding: 0 5rem 5rem;
+}
+.certi-container .certi-box {
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.certi-content .certi-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--bg-color);
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 0.5rem var(--shadow-color);
+  padding: 1rem 5rem;
+  border-top: 0.8rem solid var(--main-color);
+  border-bottom: 0.8rem solid var(--main-color);
+}
+.certi-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  /* object-fit: cover; */
+}
+.certi-box .swiper-button-next,
+.certi-box .swiper-button-prev {
+  color: var(--main-color);
+}
+.certi-box .swiper-button-next {
+  right: 0;
+}
+.certi-box .swiper-button-prev {
+  left: 0;
+}
+.certi-box .swiper-pagination-bullet {
+  background: rgba(0, 0, 0, 0.8);
+}
+.certi-box .swiper-pagination-bullet-active {
+  background: var(--main-color);
+}
+
 .contact h2 {
   margin-bottom: 1rem;
 }
