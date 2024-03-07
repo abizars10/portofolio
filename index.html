@@ -60,7 +60,7 @@
         <h2 class="heading">About <span>Me</span></h2>
         <h3>Hi, I'm Fullstack Developer</h3>
         <p>
-          I am a graduate of Bachelor of Information Engineering from Pelita Bangsa University, Cikarang. As a programmer, I have basic knowledge in programming languages that focus on developing websites to be more interactive and
+          I'm graduated with a Bachelor of Information Engineering from Pelita Bangsa University, Cikarang. As a programmer, I have basic knowledge of programming languages that focus on developing websites to be more interactive and
           responsive using Javascript and PHP languages along with their libraries and frameworks.
         </p>
       </div>
@@ -126,13 +126,14 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form action="#" name="abizar-contact-form">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input type="text" placeholder="Full Name" name="nama" />
+          <input type="email" placeholder="Email Address" name="email" />
         </div>
-        <textarea name="" id="" cols="30" rows="8" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+        <textarea name="pesan" cols="30" rows="8" placeholder="Your Message"></textarea>
+        <!-- <input type="submit" value="Send Message" class="btn" /> -->
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </section>
 
@@ -153,5 +154,17 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Javascript -->
     <script src="script.js"></script>
+    <!-- Gform Sheet -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwIEohh2z6TvLgIfag42Ht79d11rgQLRlutXVxJQ3qkYJxiueCiQf6kFcbGVjsbU37Efw/exec";
+      const form = document.forms["abizar-contact-form"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
