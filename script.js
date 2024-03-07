@@ -63,3 +63,19 @@ ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
 ScrollReveal().reveal(".home-img img, .portfolio-box, .contact form", { origin: "bottom" });
 ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
 ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", { origin: "right" });
+
+// Gform Sheet
+const scriptURL = "https://script.google.com/macros/s/AKfycbwIEohh2z6TvLgIfag42Ht79d11rgQLRlutXVxJQ3qkYJxiueCiQf6kFcbGVjsbU37Efw/exec";
+const form = document.forms["abizar-contact-form"];
+const myAlert = document.querySelector(".my-alert");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      alert("Terimakasih! Pesan Anda Sudah Terkirim.");
+      form.reset();
+      console.log("Success!", response);
+    })
+    .catch((error) => console.error("Error!", error.message));
+});

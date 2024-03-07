@@ -154,17 +154,5 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Javascript -->
     <script src="script.js"></script>
-    <!-- Gform Sheet -->
-    <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbwIEohh2z6TvLgIfag42Ht79d11rgQLRlutXVxJQ3qkYJxiueCiQf6kFcbGVjsbU37Efw/exec";
-      const form = document.forms["abizar-contact-form"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
   </body>
 </html>
