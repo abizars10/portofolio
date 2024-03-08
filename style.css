@@ -239,6 +239,28 @@ span {
   margin-bottom: 1.5rem;
   text-align: justify;
 }
+.about-content .code {
+  text-align: center;
+}
+.about-content .code i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin: 0 1rem 1rem 0;
+  transition: 0.5s ease;
+}
+.about-content .code i:hover {
+  background: var(--main-color);
+  color: var(--white-color);
+}
 
 .portfolio {
   padding-bottom: 10rem;
@@ -603,6 +625,10 @@ span {
   .about {
     flex-direction: column;
     gap: 4rem;
+  }
+  .about-content h2,
+  h3 {
+    text-align: center;
   }
 
   .portfolio .portfolio-container {
