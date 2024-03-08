@@ -330,7 +330,7 @@ span {
   border: 0.2rem solid var(--main-color);
 }
 .portfolio-layer a i {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .portfolio-layer a:hover {
   background: var(--main-color);
@@ -643,7 +643,7 @@ span {
     height: 6rem;
   }
   .portfolio-layer a i {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
   .contact form .input-box input {
