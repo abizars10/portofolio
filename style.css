@@ -213,7 +213,7 @@ span {
 }
 
 .about-img img {
-  width: 40rem;
+  width: 100rem;
   filter: drop-shadow(10px 7px 3px var(--shadow-color));
 }
 
@@ -521,7 +521,7 @@ span {
     width: 35rem;
   }
   .about-img img {
-    width: 30rem;
+    width: 100rem;
   }
   .portfolio .portfolio-container {
     display: grid;
@@ -621,6 +621,9 @@ span {
     flex-direction: column;
     gap: 4rem;
   }
+  .about-img img {
+    width: 25rem;
+  }
   .about-content h2,
   h3 {
     text-align: center;
@@ -641,7 +644,7 @@ span {
     font-size: 3rem;
   }
 
-  .contact form .input-box input {
+  /* .contact form .input-box input {
     width: 100%;
-  }
+  } */
 }
